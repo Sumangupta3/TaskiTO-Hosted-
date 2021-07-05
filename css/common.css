@@ -4,13 +4,13 @@ body {
     padding: 0;
     background-color: #a39bd2;
     font-family: 'Gochi Hand', cursive;
-    height: unset;
+    height: 100vh;
     font-size: 120%;
 
   }
   @media only screen and (min-width: 500px) {
     body{
-        height: unset;
+        height: 100vh;
     }
 }
 main {
@@ -90,6 +90,7 @@ nav{
 /*Container*/
 .container #login-row #login-column #login-box{
     margin-top: 25px;
+    margin-bottom:25px;
     width: 100%;
     height: auto;
     min-height: 450px;
