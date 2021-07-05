@@ -96,7 +96,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       return new Promise((resolve, reject) =>{
 
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "http://localhost/new-to-do/api/get_array.php?email=<?php echo $_SESSION['E-mail'] ?>");
+        xmlhttp.open("GET", "https://taskito.herokuapp.com/API/get_array.php?email=<?php echo $_SESSION['E-mail'] ?>");
         xmlhttp.onload = () => {
         const data = JSON.parse(xmlhttp.response);
         var toDoListArray = JSON.parse(data["todoArray"]);
@@ -181,7 +181,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
           // add item to array as an object with an ID so we can find and delete it later
           toDoListArray.push({ itemId, toDoItem});
           var xmlhttp = new XMLHttpRequest();
-          xmlhttp.open("GET", "http://localhost/new-to-do/api/updateArray.php?email=<?php echo $_SESSION['E-mail'] ?>&&finalArray="+JSON.stringify(toDoListArray));
+          xmlhttp.open("GET", "https://taskito.herokuapp.com/API/updateArray.php?email=<?php echo $_SESSION['E-mail'] ?>&&finalArray="+JSON.stringify(toDoListArray));
           xmlhttp.send();
 
           console.log(toDoListArray)
@@ -199,7 +199,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
           toDoListArray = array;
           toDoListArray = toDoListArray.filter(item => item.itemId !== id);
           var xmlhttp = new XMLHttpRequest();
-          xmlhttp.open("GET", "http://localhost/new-to-do/api/updateArray.php?email=<?php echo $_SESSION['E-mail'] ?>&&finalArray="+JSON.stringify(toDoListArray));
+          xmlhttp.open("GET", "https://taskito.herokuapp.com/API/updateArray.php?email=<?php echo $_SESSION['E-mail'] ?>&&finalArray="+JSON.stringify(toDoListArray));
           xmlhttp.send();
           console.log(toDoListArray);
         }
