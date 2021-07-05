@@ -1,23 +1,25 @@
 function show(){
-  let listarr = JSON.parse(localStorage.getItem('itemsJson'));
+  let listarr = localStorage.getItem('itemsJson') == null ? [] : JSON.parse(localStorage.getItem('itemsJson'));
   const ul = document.querySelector(".toDoList"); 
 
-  listarr.forEach(element => {
-    // create an li
-    const li = document.createElement('li')
-    li.setAttribute("data-id", element['itemId']);
-    // add toDoItem text to li
-    li.innerText = element['toDoItem']
-    // add li to the DOM
-    ul.appendChild(li);
-  });
+  if(localStorage.getItem('itemsJson') != null){
+    listarr.forEach(element => {
+      // create an li
+      const li = document.createElement('li')
+      li.setAttribute("data-id", element['itemId']);
+      // add toDoItem text to li
+      li.innerText = element['toDoItem']
+      // add li to the DOM
+      ul.appendChild(li);
+    });
+  }
 }
 
 show();
 // IEFE
 (() => { 
     // state variables
-    let toDoListArray = JSON.parse(localStorage.getItem('itemsJson'));
+    let toDoListArray = localStorage.getItem('itemsJson') == null ? [] : JSON.parse(localStorage.getItem('itemsJson'));
     // ui variables
     const form = document.querySelector(".form"); 
     const input = form.querySelector(".form-input");
@@ -59,6 +61,7 @@ show();
     }
     
     function addItemToArray(itemId, toDoItem) {
+      // toDoListArray = JSON.parse(localStorage.getItem('itemsJson'));
       // add item to array as an object with an ID so we can find and delete it later
       toDoListArray.push({ itemId, toDoItem});
       localStorage.setItem('itemsJson', JSON.stringify(toDoListArray));   
@@ -73,6 +76,7 @@ show();
     }
     
     function removeItemFromArray(id) {
+      // toDoListArray = JSON.parse(localStorage.getItem('itemsJson'));
       // create a new toDoListArray with all li's that don't match the ID
       toDoListArray = toDoListArray.filter(item => item.itemId !== id);
       localStorage.setItem('itemsJson', JSON.stringify(toDoListArray));
