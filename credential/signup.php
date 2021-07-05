@@ -217,26 +217,5 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="contact" id="contact">
-      <div class="contact-item">
-          <a href="mailto:sumanguptamenu@gmail.com" target="_blank">
-            <i class="icon-2 e-mail far fa-envelope fa-2x"></i></a>
-      </div>
-      <div class="contact-item">
-          <a href="https://www.linkedin.com/in/suman-gupta-b27a27190/" target="_blank">
-          <i class="icon-2 linkdin fab fa-linkedin-in fa-2x"></i></a>
-      </div>
-      <div class="contact-item">
-          <a href="https://www.instagram.com/hatersluver/" target="_blank">
-          <i class="icon-2 instagram fab fa-instagram fa-2x"></i></a>
-      </div>
-      <div class="made-by">
-        <p class="made-by-me">
-          © Suman Gupta | All Rights Reserved.
-        </p>
-      </div>
-  </div>
-  </footer>
 </body>
 </html>

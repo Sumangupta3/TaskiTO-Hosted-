@@ -3,7 +3,7 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: unset;
     background-color: #a39bd2;
     font-family: 'Gochi Hand', cursive;
     font-size: 120%;
@@ -15,11 +15,13 @@ body{
     }
 }
 
+nav{
+    margin-bottom: 30px;
+}
 nav,footer{
     background: #f1f5f8;
     background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
     background-size: 25px 25px;
-    margin-bottom: 30px;
 }
 .hearder-img{
     width: 20%;
@@ -37,7 +39,7 @@ nav,footer{
 }
 main {
     
-    min-height: 75vh;
+    min-height: 70vh;
     padding: 1rem;
     box-sizing: border-box;
     display: flex;
@@ -212,6 +214,9 @@ main {
     margin: 1px 2px;
 }
 /*footer*/
+footer{
+    margin-top: 30px;
+  }
 .contact{
     margin-top: 15px;
     text-align: center;
@@ -237,5 +242,5 @@ main {
 .made-by-me{
     font-family: 'Gochi Hand', cursive;
     color: rgba(0,0,0,.5);
-    padding: 0px 0px 8px 0 ;
+    padding: 0px 0px 0px 0px ;
 }

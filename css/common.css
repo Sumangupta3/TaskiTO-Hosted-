@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #a39bd2;
     font-family: 'Gochi Hand', cursive;
-    height: 100vh;
+    height: unset;
     font-size: 120%;
 
   }
@@ -13,6 +13,10 @@ body {
         height: unset;
     }
 }
+main {
+    height: 80vh;
+}
+
 /*BUTTON*/
 .button {
     display: inline-block;
@@ -44,7 +48,8 @@ body {
     align-items: center;
 }
 /*Nav-BAR*/
-nav,footer{
+
+nav{
     background: #f1f5f8;
     background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
     background-size: 25px 25px;
@@ -132,33 +137,3 @@ nav,footer{
       transition:  0.6s ease;
       text-align: center;
   }
-/*footer*/
-footer{
-  margin-top: 30px ;
-}
-.contact{
-    text-align: center;
-}
-.contact-item{
-    display: inline-flex;
-}
-.icon-2{
-    padding: 8px 3px 4px 3px;
-    margin:5px;
-    color: rgba(0,0,0,.5);
-}
-.e-mail:hover{
-    color:#4285f4;
-}
-.linkdin:hover{
-   color:#0a66c2;
-}
-.instagram:hover{
-   color: #c32aa3;
-
-}
-.made-by-me{
-    font-family: 'Gochi Hand', cursive;
-    color: rgba(0,0,0,.5);
-    padding: 0px 0px 8px 0 ;
-}
