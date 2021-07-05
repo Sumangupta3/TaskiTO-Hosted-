@@ -18,7 +18,8 @@ if (isset($_POST['submit'])) {
 
   if ($err == false) {
     $alert = true;
-    $connect = mysqli_connect("localhost", "root", "", "to-do list");
+    $connent = mysqli_connect("remotemysql.com", "F8I3FAjxrT", "chD6vtoVGP", "F8I3FAjxrT");
+    // $connect = mysqli_connect("localhost", "root", "", "to-do list");
 
     $sql = "SELECT * FROM `users` WHERE `E-mail` = '$email' AND `Password` = '$password';";
     $result = mysqli_query($connect, $sql);

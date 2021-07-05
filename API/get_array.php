@@ -1,6 +1,6 @@
 <?php
     function getArray($email){
-        $connent = mysqli_connect("localhost", "root", "", "to-do list");
+        $connent = mysqli_connect("remotemysql.com", "F8I3FAjxrT", "chD6vtoVGP", "F8I3FAjxrT");
         $query = "SELECT * FROM users WHERE `E-mail` = '$email'";
         $res = mysqli_query($connent, $query);
 
