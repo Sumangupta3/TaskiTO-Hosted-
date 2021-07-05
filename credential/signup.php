@@ -53,7 +53,7 @@
 
         if($err==false){
             $alert=true;
-            $connent = mysqli_connect("remotemysql.com", "F8I3FAjxrT", "chD6vtoVGP", "F8I3FAjxrT");
+            $connect = mysqli_connect("remotemysql.com", "F8I3FAjxrT", "PI9fV18M1F", "F8I3FAjxrT");
             // $connect=mysqli_connect("localhost","root","","to-do list");
             $sql= "INSERT INTO `users` (`First Name`, `Last Name`, `E-mail`, `Password`, `todoArray`) VALUES ('$fname', '$lname', '$email',
              '$password', '[]')";
