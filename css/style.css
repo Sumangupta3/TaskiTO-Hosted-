@@ -188,7 +188,6 @@ footer{
     margin-top: 35px;
 }
 .contact{
-    margin-top: 15px;
     text-align: center;
 }
 .contact-item{
@@ -213,4 +212,5 @@ footer{
     font-family: 'Gochi Hand', cursive;
     color: rgba(0,0,0,.5);
     padding: 0px 0px 8px 0 ;
+    margin-bottom: 0px;
 }
